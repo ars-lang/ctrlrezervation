@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>Fast Registration</title>
+</head>
+<body bgcolor="#3d3b3d">
+	<center>
+	<h1 style="color:#00e3ff">Fast Registration</h1>
+	<br>
 
-<body style="color:#3d3b3d">
-<center>
-<h1 style="color:#00e3ff">Fast Registration</h1>
-<br>
-
-<form name="publish">
+	<form name="publish">
 	<label for="login" style="color:#ffffff">Login: </label>
-    <input id="login" name="login" placeholder="ctrl_user" required><br>
-    <br>
+    	<input id="login" name="login" placeholder="ctrl_user" required><br>
+    	<br>
 
-	<label for="email" style="color:#ffffff">E-mail: </label>
-	<input type="email" id="email" name="email" placeholder="user@example.com" required><br>
-	<br>
+		<label for="email" style="color:#ffffff">E-mail: </label>
+		<input type="email" id="email" name="email" placeholder="user@example.com" required><br>
+		<br>
 
-	<label for="password" style="color:#ffffff">Password: </label>
-	<input type="password" id="password" name="password" placeholder="12345" required><br>
-	<br>
+		<label for="password" style="color:#ffffff">Password: </label>
+		<input type="password" id="password" name="password" placeholder="12345" required><br>
+		<br>
 
-	<input type="submit" value="Register">
-</form>
+		<input type="submit" value="Register">
+	</form>
 
-</center>
-<script>
+	</center>
+	<script>
 document.forms.publish.onsubmit = function() {
 	var login = this.login.value;
     var email = this.email.value;
@@ -42,7 +44,7 @@ document.forms.publish.onsubmit = function() {
 xhr.send(data);
 document.write("You can check your registration on <a href='https://ctrl.booking.enes.tech'>ctrl.booking.enes.tech</a>");
 };
-</script>
+	</script>
 
 </body>	
 </html>
