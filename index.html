@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<center>
+<h1>Fast Registration</h1>
+<br>
+
+<form name="publish">
+	<label for="login">Login: </label>
+    <input id="login" name="login" placeholder="ctrl_user" required><br>
+    <br>
+
+	<label for="email">E-mail: </label>
+	<input type="email" id="email" name="email" placeholder="user@example.com" required><br>
+	<br>
+
+	<label for="password">Password: </label>
+	<input type="password" id="password" name="password" placeholder="12345" required><br>
+	<br>
+
+	<input type="submit" value="Register">
+</form>
+
+</center>
+<script>
+document.forms.publish.onsubmit = function() {
+	var login = this.login.value;
+    var email = this.email.value;
+    var password = this.password.value;
+	var url = "https://ctrl.api.enes.tech/account/register/";
+
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", url);
+
+	xhr.setRequestHeader("accept", "application/json");
+	xhr.setRequestHeader("Authorization", "Key b5f4c6b7-daef-4661-b92a-4d59612590e0");
+	xhr.setRequestHeader("Content-Type", "application/json");
+
+	var data = 		`{"login":"${login}","password":"${password}","first_name":"site","last_name":"ctrl","address":"Arhitektu iela 1","birthdate":"2022-03-01","email":"${email}","phone":"37120001343"}`;
+
+xhr.send(data);
+document.write("You can check your registration on <a href='https://ctrl.booking.enes.tech'>ctrl.booking.enes.tech</a>");
+};
+</script>
+
+</html>
